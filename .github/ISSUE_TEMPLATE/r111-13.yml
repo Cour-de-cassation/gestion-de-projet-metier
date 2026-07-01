@@ -1,0 +1,43 @@
+name: "📋 Incident - R111-13"
+description: "Signaler un incident lié à R111-13"
+title: "[R111-13] - "
+labels: ["R111-13"]
+body:
+  - type: dropdown
+    id: source-decision
+    attributes:
+      label: Source de la décision
+      options:
+        - CC
+        - CA
+        - TJ
+        - TCOM
+        - CPH
+    validations:
+      required: true
+
+  - type: input
+    id: lien-judilibre
+    attributes:
+      label: Lien Judilibre vers la décision
+      placeholder: "https://www.courdecassation.fr/decision/..."
+    validations:
+      required: true
+
+  - type: input
+    id: references-decision
+    attributes:
+      label: Références de la décision (date, RG, juridiction)
+      description: À défaut du lien Judilibre ci-dessus — complément optionnel
+      placeholder: "Ex: 12/03/2026, RG n°21/01234, CA Paris"
+    validations:
+      required: false
+
+  - type: input
+    id: date-reception-recours
+    attributes:
+      label: Date de réception du recours
+      description: Format JJ/MM/AAAA
+      placeholder: "JJ/MM/AAAA"
+    validations:
+      required: true
