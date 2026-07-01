@@ -41,3 +41,10 @@ body:
       placeholder: "JJ/MM/AAAA"
     validations:
       required: true
+
+  - type: textarea
+    id: commentaire
+    attributes:
+      label: Commentaire
+    validations:
+      required: false
