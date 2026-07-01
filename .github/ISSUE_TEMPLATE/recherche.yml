@@ -1,0 +1,50 @@
+name: "🔎 Recherche d'une décision"
+description: "Demander la recherche d'une décision de justice"
+title: "[Recherche] - "
+labels: ["recherche"]
+body:
+  - type: dropdown
+    id: source
+    attributes:
+      label: source
+      options:
+        - CC
+        - CA
+        - TJ
+        - TCOM
+        - CPH
+    validations:
+      required: true
+
+  - type: input
+    id: juridiction
+    attributes:
+      label: Juridiction
+      description: Juridiction ayant rendu la décision recherchée
+      placeholder: "Cour d'appel de Paris"
+    validations:
+      required: true
+
+  - type: input
+    id: numero-rg
+    attributes:
+      label: Numéro RG
+      placeholder: "Ex: 21/01234"
+    validations:
+      required: true
+
+  - type: input
+    id: date-decision
+    attributes:
+      label: Date de la décision
+      description: Format JJ/MM/AAAA
+      placeholder: "JJ/MM/AAAA"
+    validations:
+      required: true
+
+  - type: textarea
+    id: commentaire
+    attributes:
+      label: Commentaire
+    validations:
+      required: false
